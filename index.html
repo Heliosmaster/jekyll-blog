@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Development, Design, Photography and Life
+title: Home 
 headertype: light
 ---
 <div class="post col-fixed-800">
@@ -10,7 +10,8 @@ headertype: light
 	{% for post in paginator.posts %}
 		<li><a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date_to_string }}<span class="readingtime">{{ post.content | reading_time }}</span></li>
 	{% endfor %}
-	</ul>
+</ul>
+<hr style="border-top: 1px solid #dededc;margin:10px 0;width:100px;" /> 
 	<div class="pagination">
 		{% if paginator.previous_page %}
 			{% if paginator.previous_page == 1 %}

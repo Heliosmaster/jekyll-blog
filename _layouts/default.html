@@ -5,26 +5,30 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>{{ page.title }} | {{ site.title }}</title>
 		<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
-		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:600|Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:600|Libre+Baskerville:400,700,400italic|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="{{ site.baseurl }}/assets/themes/bbrks.me/css/reset.css" type="text/css" />
 		<link rel="stylesheet" href="{{ site.baseurl }}/assets/themes/bbrks.me/css/style.css" type="text/css" />
 		<link rel="stylesheet" href="{{ site.baseurl }}/assets/themes/bbrks.me/css/syntax.css" type="text/css" />
 		<link rel="stylesheet" href="{{ site.baseurl }}/assets/themes/bbrks.me/css/font.css" type="text/css" />
 		<!--[if lte IE 7]>
-			<link rel="stylesheet" href="{{ site.baseurl }}/assets/themes/bbrks.me/css/ie.css" type="text/css" />
+		<link rel="stylesheet" href="{{ site.baseurl }}/assets/themes/bbrks.me/css/ie.css" type="text/css" />
 		<![endif]-->
 	</head>
 	<body>
 
-		<div class="postheader parallax" style="background-image:url('{{ site.baseurl }}/assets/posts{{ page.id }}/banner.jpg');">
+		<div class="postheader parallax" style="background-image:url('{{ site.baseurl }}/assets/posts{{ page.id }}/banner.jpg');"> 
 			<div class="col-fixed-800">
 				<div class="header header-{{ page.headertype }}">
-					<h1><a href="/" title="{{ site.author.name }}' Website">{{ site.author.name }}</a></h1>
+					<h1><a href="/" title="{{ site.title }} Website">{{ site.title }}</a></h1>
+
 					<ul class="navmenu">
-						<li><a href="/" title="{{ site.author.name }}' Website">Home</a></li>
-						<li><a href="http://twitter.com/{{ site.author.twitter }}" title="{{ site.author.name }} on Twitter">Twitter</a></li>
+
+						<li><a href="/" title="{{ site.title }}">Home</a></li>
+						<li><a href="/about/" title="About">About</a></li>
+
 						<li><a href="http://github.com/{{ site.author.github }}" title="{{ site.author.name }} on GitHub">GitHub</a></li>
-						<li><a href="/feed.xml" title="{{ site.author.name }}' RSS Feed">RSS</a></li>
+						<li><a href="http://twitter.com/{{ site.author.twitter }}" title="{{ site.author.name }} on Twitter">Twitter</a></li>
+						<li><a href="/feed.xml" title="{{ site.title }}' RSS Feed">RSS</a></li>
 					</ul>
 					<div class="clearfix"></div>
 				</div>
@@ -32,8 +36,22 @@
 		</div>
 
 		{{ content }}
+		<footer class="clearfix">
+		<hr class="footerseparator" />
+		<section class="footer-content">
+		<div id="social">
+			<a href="http://github.com/{{ site.author.github }}" style="color:black;">%</a>
+			<a href="http://twitter.com/{{ site.author.twitter }}" style="color:#4099FF">!</a>
+			<a href="https://plus.google.com/{{ site.author.gplus }}" style="color:#d6492c">#</a>
+			<a href="https://www.linkedin.com/in/{{ site.author.linkedin }} " style="color:#4875B4">,</a>
+			<a href="https://facebook.com/{{ site.author.facebook }}" style="color:#3b5998" >$</a>
+		</div> 
+		<p style="font-size:12px;"><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><span class="icon">&#x2b;</span></a></p>
+		</section>
+		</footer>
 
-		<div class="footer">
+
+		<!-- <div class="footer">
 			<ul class="social icon">
 				<li><a href="http://facebook.com/{{ site.author.facebook }}" title="{{ site.author.name }} on Facebook">f</a></li>
 				<li><a href="http://flickr.com/photos/{{ site.author.flickr }}" title="{{ site.author.name }} on Flickr">l</a></li>
@@ -45,7 +63,7 @@
 			<p>Made with <a href="http://github.com/{{ site.author.github }}/jekyll-blog" title="Fork me on GitHub!" class="icon">&#9829;</a> and <a href="http://jekyllrb.com/" title="Jekyll - A blog-aware, static site generator in Ruby.">Jekyll</a></p>
 			<p>&copy; 2013 <a href="http://bbrks.me">Ben Brooks</a></p>
 		</div>
-
+		-->
 		<script src="{{ site.baseurl }}/assets/themes/bbrks.me/js/parallax.js" type="text/javascript" charset="utf-8" async defer></script>
 		<script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -55,11 +73,11 @@
 			_gaq.push(['_setDomainName', 'bbrks.me']);
 			_gaq.push(['_trackPageview']);
 			(function() {
-				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-			})();
-		</script>
+			 var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			 })();
+</script>
 
 	</body>
 </html>
