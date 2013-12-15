@@ -1,6 +1,4 @@
-jekyll-blog
+davide.im
 ===========
 
-My Jekyll powered blog. Now responsive!
-
-![Article Page](https://raw.github.com/bbrks/jekyll-blog/master/assets/themes/bbrks.me/screenshots/article.png)
+The n-th iteration of my blog, proudly powered by Jekyll. Thanks to [Ben Brooks](http://bbrks.me) for the inspiration and a solid ground from which I expanded.
